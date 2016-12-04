@@ -37,9 +37,6 @@ public class VoiceThread implements Runnable{
 
 					if(bs.sayElma(gogus, bel, kalca)){
 						System.out.println("elmasın");
-						MainPageView1.panelLab.setIcon(new ImageIcon("konusan.gif"));
-						MainPageView1.panel.repaint();
-						Main.frame.repaint();
 						voc.say("you are apple. we analyze your clothes");
 					}
 					
