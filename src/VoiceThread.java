@@ -26,41 +26,19 @@ public class VoiceThread implements Runnable{
 		frame.btnOk.addActionListener(new ActionListener(){
 			@Override
 			public void actionPerformed(ActionEvent e) {
+				
 				if(e!= null){
 					double kalca=Double.parseDouble(frame.kalcaTF.getText());
 					double bel = Double.parseDouble(frame.belTF.getText());
 					double gogus = Double.parseDouble(frame.gogusTF.getText());
-					BodyShape bodyShape = new BodyShape(gogus,bel,kalca);
-					if(bodyShape.sayElma(gogus, bel, kalca)){
-						System.out.println("elmasın");
-						voc.say("you are apple. we analyze your clothes");
-					}
-					else if(bodyShape.sayKumsaati(gogus, bel, kalca)){
-						System.out.println("kum saatisin");
-						voc.say("you are hourglass. we analyze your clothes");
-					}
-					
-					else if(bodyShape.sayArmut(gogus, bel, kalca)){
-						System.out.println("armut");
-						voc.say("you are pear. we analyze your clothes");
-					}
-					
-					else if(bodyShape.sayDikdotgen(gogus, bel, kalca)){
-						System.out.println("dikdörtgen");
-						voc.say("you are straight. we analyze your clothes");
-					}
-					
-					else if(bodyShape.sayHavuc(gogus, bel, kalca)){
-						System.out.println("havuçsun");
-						voc.say("you are carrot. we analyze your clothes");
-					}
-					
-					
+					BodyTypeSpeakerThread bodyType = new BodyTypeSpeakerThread(gogus,bel,kalca);
+					Thread tr = new Thread(bodyType);
+					tr.start();
 				}
-				
-			}
-		});
-	}
+				}
+			});
+		}
+
 	public void addBackButtonListener(){
 		frame.buttonBack.addActionListener(new ActionListener(){
 			@Override
