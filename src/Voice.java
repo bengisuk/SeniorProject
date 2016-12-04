@@ -10,12 +10,15 @@ public class Voice {
 		this.name = name;
 		this.voice = VoiceManager.getInstance().getVoice(this.name);
 		this.voice.allocate();
-		
-		
+
 	}
 	
 	public void say (String s){
 		this.voice.speak(s);
+	}
+	
+	public void stop(){
+		this.voice.getAudioPlayer().close();
 	}
 	
 
