@@ -29,16 +29,35 @@ public class VoiceThread implements Runnable{
 				if(e!= null){
 					System.out.println("wdfg");
 					System.out.println(frame.kalcaTF.getName());
-					float kalca=Float.parseFloat(frame.kalcaTF.getText());
-					System.out.println(kalca);
-					float bel = Float.parseFloat(frame.belTF.getText());
-					float gogus = Float.parseFloat(frame.gogusTF.getText());
+					double kalca=Double.parseDouble(frame.kalcaTF.getText());
+					double bel = Double.parseDouble(frame.belTF.getText());
+					double gogus = Double.parseDouble(frame.gogusTF.getText());
 					BodyShape bs = new BodyShape(kalca,bel,gogus);
 
 					if(bs.sayElma(gogus, bel, kalca)){
 						System.out.println("elmasın");
 						voc.say("you are apple. we analyze your clothes");
 					}
+					else if(bs.sayKumsaati(gogus, bel, kalca)){
+						System.out.println("kum saatisin");
+						voc.say("you are hourglass. we analyze your clothes");
+					}
+					
+					else if(bs.sayArmut(gogus, bel, kalca)){
+						System.out.println("armut");
+						voc.say("you are pear. we analyze your clothes");
+					}
+					
+					else if(bs.sayDikdotgen(gogus, bel, kalca)){
+						System.out.println("dikdörtgen");
+						voc.say("you are straight. we analyze your clothes");
+					}
+					
+					else if(bs.sayHavuc(gogus, bel, kalca)){
+						System.out.println("havuçsun");
+						voc.say("you are carrot. we analyze your clothes");
+					}
+					
 					
 				}
 				
