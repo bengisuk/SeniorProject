@@ -22,9 +22,9 @@ public class MainPageView1 extends JFrame {
 	private JTextField userNameTF;
 	private JTextField ageTF;
 	private JTextField jobTF;
-	private JTextField chestGirthTF;
-	private JTextField waistGirthTF;
-	private JTextField hipGirthTF;
+	public static JTextField gogusTF;
+	public static JTextField belTF;
+	public static  JTextField kalcaTF;
 
 	/**
 	 * Launch the application.
@@ -63,31 +63,20 @@ public class MainPageView1 extends JFrame {
 		jobTF.setBounds(292, 86, 134, 28);
 		contentPane.add(jobTF);
 		
-		chestGirthTF = new JTextField();
-		chestGirthTF.setColumns(10);
-		chestGirthTF.setBounds(292, 126, 134, 28);
-		contentPane.add(chestGirthTF);
+		gogusTF = new JTextField();
+		gogusTF.setColumns(10);
+		gogusTF.setBounds(292, 126, 134, 28);
+		contentPane.add(gogusTF);
 		
-		waistGirthTF = new JTextField();
-		waistGirthTF.setColumns(10);
-		waistGirthTF.setBounds(292, 166, 134, 28);
-		contentPane.add(waistGirthTF);
+		belTF = new JTextField();
+		belTF.setColumns(10);
+		belTF.setBounds(292, 166, 134, 28);
+		contentPane.add(belTF);
 		
-		btnOk = new JButton("OK!");
+		btnOk = new     JButton("OK!");
 		btnOk.setBounds(302, 257, 107, 29);
 		contentPane.add(btnOk);
-		btnOk.addActionListener(new ActionListener(){
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				// TODO Auto-generated method stub
-				//if(e!= null){
-					System.out.println("sdfg");
-					
-					contentPane.repaint();
-				}
-				
-			//}
-		});
+
 		
 		JLabel userNameLbl = new JLabel("User Name:");
 		userNameLbl.setBounds(156, 12, 101, 16);
@@ -101,21 +90,21 @@ public class MainPageView1 extends JFrame {
 		jobLbl.setBounds(156, 92, 101, 16);
 		contentPane.add(jobLbl);
 		
-		JLabel lblChestGirth = new JLabel("Chest Girth:");
-		lblChestGirth.setBounds(156, 132, 101, 16);
-		contentPane.add(lblChestGirth);
+		JLabel lblgogus = new JLabel("Chest Girth:");
+		lblgogus.setBounds(156, 132, 101, 16);
+		contentPane.add(lblgogus);
 		
 		JLabel lblWaistGirth = new JLabel("Waist Girth:");
 		lblWaistGirth.setBounds(156, 172, 101, 16);
 		contentPane.add(lblWaistGirth);
 		
-		hipGirthTF = new JTextField();
-		hipGirthTF.setColumns(10);
-		hipGirthTF.setBounds(292, 206, 134, 28);
-		contentPane.add(hipGirthTF);
+		kalcaTF = new JTextField();
+		kalcaTF.setColumns(10);
+		kalcaTF.setBounds(292, 206, 134, 28);
+		contentPane.add(kalcaTF);
 		
-		JLabel lblHipGirth = new JLabel("Hip Girth:");
-		lblHipGirth.setBounds(156, 212, 101, 16);
-		contentPane.add(lblHipGirth);
+		JLabel lblkalca = new JLabel("Hip Girth:");
+		lblkalca.setBounds(156, 212, 101, 16);
+		contentPane.add(lblkalca);
 	}
 }

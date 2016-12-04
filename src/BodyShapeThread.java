@@ -4,28 +4,19 @@ import java.awt.event.ActionListener;
 import javax.swing.ImageIcon;
 
 
-public class VoiceThread implements Runnable{
-	 Voice voc = new Voice("kevin16");
-	 //gerek yok isSpeaking e
-	 //	 static boolean isSpeaking;
-	 MainPageView1 frame ;
+public class BodyShapeThread implements Runnable{
+	Voice voc = new Voice("kevin16");
+	MainPageView1 frame;
 	@Override
 	public void run() {
-		// TODO Auto-generated method stub		
+		// TODO Auto-generated method stub
 		MainPageView1.panelLab.setIcon(new ImageIcon("konusan.gif"));
-		voc.say("hello welcome out application. Please enter the infortmation that we need.");
-		MainPageView1.panelLab.setIcon(new ImageIcon("goz.gif"));
 		MainPageView1.panel.repaint();
 		Main.frame.repaint();
 		frame.btnOk.addActionListener(new ActionListener(){
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				//Thread t1 = new Thread(new BodyShapeThread());
-				//t1.start();
 				// TODO Auto-generated method stub
-				/*Thread t1 = new Thread(new BodyShapeThread());
-				t1.run();*/
-
 				if(e!= null){
 					System.out.println("wdfg");
 					System.out.println(frame.kalcaTF.getName());
@@ -37,9 +28,6 @@ public class VoiceThread implements Runnable{
 
 					if(bs.sayElma(gogus, bel, kalca)){
 						System.out.println("elmasın");
-						MainPageView1.panelLab.setIcon(new ImageIcon("konusan.gif"));
-						MainPageView1.panel.repaint();
-						Main.frame.repaint();
 						voc.say("you are apple. we analyze your clothes");
 					}
 					
@@ -48,8 +36,5 @@ public class VoiceThread implements Runnable{
 			}
 		});
 		
-		
-		
 	}
-
 }

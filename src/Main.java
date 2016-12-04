@@ -15,6 +15,7 @@ import java.lang.Math;
 
 public class Main extends JFrame{
 	static MainPageView1 frame;
+	public static Thread tr;
 
 	public static void main(String[] args){
 		new Main();
@@ -29,7 +30,7 @@ public class Main extends JFrame{
 						//MainPageView1.panel.add(lab);
 						//MainPageView1.panel.repaint();
 						//frame.repaint();
-						Thread tr = new Thread(new VoiceThread());
+						tr = new Thread(new VoiceThread());
 						tr.start();
 						//Thread tr2 = new Thread( )
 						/*while(true){
