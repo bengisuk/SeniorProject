@@ -13,9 +13,9 @@ import javax.swing.JButton;
 import javax.swing.JLabel;
 
 
-public class MainPageView1 extends JFrame {
+public class SizeView extends JFrame {
 
-	private JPanel contentPane;
+	public static JPanel contentPane;
 	static JPanel panel;
 	static JButton btnOk;
 	static JLabel panelLab;
@@ -25,6 +25,7 @@ public class MainPageView1 extends JFrame {
 	public static JTextField gogusTF;
 	public static JTextField belTF;
 	public static  JTextField kalcaTF;
+	public static JButton buttonBack;
 
 	/**
 	 * Launch the application.
@@ -34,7 +35,7 @@ public class MainPageView1 extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public MainPageView1() {
+	public SizeView() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 350);
 		contentPane = new JPanel();
@@ -43,7 +44,7 @@ public class MainPageView1 extends JFrame {
 		contentPane.setLayout(null);
 		
 		panel = new JPanel();
-		panel.setBounds(6, 6, 115, 166);
+		panel.setBounds(6, 52, 115, 166);
 		contentPane.add(panel);
 		panelLab = new JLabel();
 		panel.add(panelLab);
@@ -106,5 +107,9 @@ public class MainPageView1 extends JFrame {
 		JLabel lblkalca = new JLabel("Hip Girth:");
 		lblkalca.setBounds(156, 212, 101, 16);
 		contentPane.add(lblkalca);
+		
+		buttonBack = new JButton("<-");
+		buttonBack.setBounds(4, 7, 76, 29);
+		contentPane.add(buttonBack);
 	}
 }

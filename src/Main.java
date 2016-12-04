@@ -14,7 +14,8 @@ import java.awt.event.KeyEvent;
 import java.lang.Math;
 
 public class Main extends JFrame{
-	static MainPageView1 frame;
+	static SizeView frame;
+	static StartPageView fr;
 	public static Thread tr;
 
 	public static void main(String[] args){
@@ -22,17 +23,20 @@ public class Main extends JFrame{
 			EventQueue.invokeLater(new Runnable() {
 				public void run() {
 					try {
-						frame = new MainPageView1();
-						frame.setVisible(true);
+
+						/*frame = new SizeView();
+						frame.setVisible(true);*/
 						//ImageIcon icon = new ImageIcon("konusan.gif");
 						//System.out.println(icon.getIconHeight());
 						//JLabel lab = new JLabel(icon);
 						//MainPageView1.panel.add(lab);
 						//MainPageView1.panel.repaint();
 						//frame.repaint();
-						tr = new Thread(new VoiceThread());
+						tr = new Thread(new BodyShapeThread());
 						tr.start();
-						//Thread tr2 = new Thread( )
+						/*tr = new Thread(new VoiceThread());
+						tr.start();
+						//Thread tr2 = new Thread( )*/
 						/*while(true){
 							if(VoiceThread.isSpeaking == false){
 								lab.setIcon(new ImageIcon("goz.gif"));
