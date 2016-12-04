@@ -32,7 +32,7 @@ public class VoiceThread implements Runnable{
 					double kalca=Double.parseDouble(frame.kalcaTF.getText());
 					double bel = Double.parseDouble(frame.belTF.getText());
 					double gogus = Double.parseDouble(frame.gogusTF.getText());
-					BodyShape bs = new BodyShape(kalca,bel,gogus);
+					BodyShape bs = new BodyShape(gogus,bel,kalca);
 
 					if(bs.sayElma(gogus, bel, kalca)){
 						System.out.println("elmasın");
