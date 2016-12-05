@@ -16,7 +16,7 @@ import javax.swing.JLabel;
 public class SizeView extends JFrame {
 
 	public static JPanel contentPane;
-	static JPanel panel;
+	static JPanel avatarPanel;
 	static JButton btnOk;
 	static JLabel panelLab;
 	private JTextField userNameTF;
@@ -43,11 +43,11 @@ public class SizeView extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		panel = new JPanel();
-		panel.setBounds(6, 52, 115, 166);
-		contentPane.add(panel);
+		avatarPanel = new JPanel();
+		avatarPanel.setBounds(6, 52, 115, 166);
+		contentPane.add(avatarPanel);
 		panelLab = new JLabel();
-		panel.add(panelLab);
+		avatarPanel.add(panelLab);
 		
 		userNameTF = new JTextField();
 		userNameTF.setBounds(292, 6, 134, 28);

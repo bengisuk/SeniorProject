@@ -31,7 +31,7 @@ public class VoiceThread implements Runnable{
 					double kalca=Double.parseDouble(frame.kalcaTF.getText());
 					double bel = Double.parseDouble(frame.belTF.getText());
 					double gogus = Double.parseDouble(frame.gogusTF.getText());
-					BodyTypeSpeakerThread bodyType = new BodyTypeSpeakerThread(gogus,bel,kalca);
+					BodyShapeAnalyzerThread bodyType = new BodyShapeAnalyzerThread(gogus,bel,kalca);
 					Thread tr = new Thread(bodyType);
 					tr.start();
 				}
@@ -44,7 +44,7 @@ public class VoiceThread implements Runnable{
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				if(e!= null){
-					BodyShapeThread bsthread = new BodyShapeThread();
+					StartPageThread bsthread = new StartPageThread();
 					frame.setVisible(false);
 					Thread tr = new Thread(bsthread);
 					tr.start();

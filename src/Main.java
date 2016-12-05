@@ -32,7 +32,7 @@ public class Main extends JFrame{
 						//MainPageView1.panel.add(lab);
 						//MainPageView1.panel.repaint();
 						//frame.repaint();
-						tr = new Thread(new BodyShapeThread());
+						tr = new Thread(new StartPageThread());
 						tr.start();
 						/*tr = new Thread(new VoiceThread());
 						tr.start();

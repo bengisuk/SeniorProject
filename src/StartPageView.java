@@ -33,19 +33,11 @@ public class StartPageView extends JFrame{
 		
 		
 		buttonBodyMeasurement = new JButton("Enter Body Measurement");
-		buttonBodyMeasurement.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			}
-		});
 		buttonBodyMeasurement.setBounds(218, 76, 195, 38);
-		getContentPane().add(buttonBodyMeasurement);
+		contentPane.add(buttonBodyMeasurement);
 		
 		buttonGuide = new JButton("Check-Out Our Guide");
-		buttonGuide.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			}
-		});
 		buttonGuide.setBounds(218, 138, 195, 38);
-		getContentPane().add(buttonGuide);
+		contentPane.add(buttonGuide);
 	}
 }

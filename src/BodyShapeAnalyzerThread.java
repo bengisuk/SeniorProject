@@ -1,14 +1,14 @@
 import javax.swing.ImageIcon;
 
 
-public class BodyTypeSpeakerThread implements Runnable{
+public class BodyShapeAnalyzerThread implements Runnable{
 	public double gogus;
 	public double kalca;
 	public double bel;
 	Voice voc = new Voice("kevin16");
 	SizeView frame ;
 	
-	public BodyTypeSpeakerThread(double gogus, double bel, double kalca){
+	public BodyShapeAnalyzerThread(double gogus, double bel, double kalca){
 		this.gogus = gogus;
 		this.kalca = kalca;
 		this.bel=bel;
